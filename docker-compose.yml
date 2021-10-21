@@ -1,0 +1,11 @@
+version: '3'
+services:
+  decasa-db:
+    image: postgres:11-alpine
+    container_name: decasa-db
+    environment:
+      - 'POSTGRES_DB=decasa'
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+    ports:
+      - '5432:5432'
